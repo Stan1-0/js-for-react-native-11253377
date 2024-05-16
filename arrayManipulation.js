@@ -7,9 +7,24 @@ function processArray(numbers) {
   );
 }
 
-//Test code
-/*
+function formatArrayStrings(strings, processedNumbers) {
+  return strings.map((str, index) => {
+    if (processedNumbers[index] % 2 == 0) {
+      return str.toUpperCase();
+    } else {
+      return str.toLowerCase();
+    }
+  });
+}
+
+/*Test code for processArray
 const input = [1, 3, 4, 8, 10];
-let result = processArray(input);
-console.log(result); //Output: [3, 9, 16, 64, 100]
-*/
+console.log(processArray(input)); //Output: [3, 9, 16, 64, 100]
+ */
+
+/*Test code for formatArrayStrings
+ const strings = ["hello", "world", "example", "array"];
+const numbers = [1, 3, 4, 8,];
+const processedNumbers = processArray(numbers);
+console.log(formatArrayStrings(strings, processedNumbers));
+ */
